@@ -1,4 +1,4 @@
-<h1 align="center"> UCoffee Review Project(In Progress) </h1>
+<h1 align="center"> Coffee Review Project(In Progress) </h1>
 
 <h2>Purpose</h2>
   <ol type="1">
