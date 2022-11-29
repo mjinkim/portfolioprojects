@@ -202,30 +202,94 @@ SELECT AVG(accuracy) as '2022_Accuracy', AVG(incorrect_calls) as Incorrect_Calls
 FROM baseball..mlb_umpire_scorecard
 WHERE (lower(date) LIKE '%2022%');
 
-----------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------- THEORY ------------------------------------------------------------------------------------
 --Testing Theory: Does a Home Field advantage impact overall umpire performance 
 SELECT umpire, home, home_team_runs, away, away_team_runs, incorrect_calls, correct_calls, accuracy, favor_home
 FROM baseball..mlb_umpire_scorecard
 
 -- Created view to test theory 
-CREATE VIEW home_vs_away AS(
-SELECT umpire, home, home_team_runs, away, away_team_runs, incorrect_calls, correct_calls, accuracy,
+CREATE VIEW home_vs_away_games AS(
+SELECT umpire, home, home_team_runs, away, away_team_runs, incorrect_calls, correct_calls, accuracy, date, 
 CASE
 	WHEN home_team_runs > away_team_runs THEN 'Home'
 	WHEN away_team_runs > home_team_runs THEN 'Away'
+	WHEN home_team_runs = away_team_runs THEN 'Tied'
 	END as Winner
 FROM baseball..mlb_umpire_scorecard
 )
+-------------------- Reveiwing Theory --------------------
+SELECT *
+FROM home_vs_away_games
+ORDER by Winner
+
+-- General Stats
+SELECT COUNT(Winner) as Home_Wins, AVG(incorrect_calls) as incorrect, AVG(correct_calls) as correct
+FROM home_vs_away_games
+WHERE Winner = 'Home'
+-- 9753
+
+SELECT COUNT(Winner) as Away_Wins, AVG(incorrect_calls) as incorrect, AVG(correct_calls) as correct
+FROM home_vs_away_games
+WHERE Winner = 'Away'
+-- 8459
+
+SELECT MAX(home_team_runs) as max_home_team_runs, MAX(away_team_runs) as max_away_team_runs, 
+AVG(home_team_runs) as avg_home_team_runs, AVG(away_team_runs) as avg_away_team_runs,
+MIN(home_team_runs) as min_home_team_runs, MIN(away_team_runs) as min_away_team_runs
+FROM home_vs_away_games
+-- MAX 29h & 28a -- AVG 4.55h & 4.43a -- MIN 0h & 0a
+
+----------------------------------------------------------------------------------------------------------------------------------
+-- General Stats for home wins and away wins
+
+CREATE VIEW home_stats AS(
+SELECT AVG(accuracy) as avg_home_accuracy, AVG(incorrect_calls) as avg_home_incorrect, AVG(correct_calls) as avg_home_correct,
+MAX(accuracy) as max_home_accuracy, MAX(incorrect_calls) as max_home_incorrect, MAX(correct_calls) as max_home_correct,
+MIN(accuracy) as min_home_accuracy, MIN(incorrect_calls) as min_home_incorrect, MIN(correct_calls) as min_home_correct
+FROM home_vs_away_games
+WHERE Winner = 'Home'
+)
+
+CREATE VIEW away_stats AS(
+SELECT AVG(accuracy) as avg_away_accuracy, AVG(incorrect_calls) as avg_away_incorrect, AVG(correct_calls) as avg_away_correct,
+MAX(accuracy) as max_away_accuracy, MAX(incorrect_calls) as max_away_incorrect, MAX(correct_calls) as max_away_correct,
+MIN(accuracy) as min_away_accuracy, MIN(incorrect_calls) as min_away_incorrect, MIN(correct_calls) as min_away_correct
+FROM home_vs_away_games
+WHERE Winner = 'Away'
+)
 
 SELECT *
-FROM home_vs_away
-WHERE home_team_runs > 10 AND away_team_runs > 10
-ORDER by Winner DESC
+FROM home_stats
 
-SELECT AVG(accuracy) as Home_accuracy
-FROM home_vs_away
-WHERE Winner = 'Home' AND home_team_runs > 10
+SELECT *
+FROM away_stats
+----------------------------------------------------------------------------------------------------------------------------------
+-- 1 score difference
+SELECT AVG(accuracy) as avg_home_accuracy, AVG(incorrect_calls) as avg_home_incorrect, AVG(correct_calls) as avg_home_correct,
+MAX(accuracy) as max_home_accuracy, MAX(incorrect_calls) as max_home_incorrect, MAX(correct_calls) as max_home_correct,
+MIN(accuracy) as min_home_accuracy, MIN(incorrect_calls) as min_home_incorrect, MIN(correct_calls) as min_home_correct
+FROM home_vs_away_games
+WHERE Winner = 'Home' 
+and (home_team_runs - away_team_runs) = 1 
 
-SELECT AVG(accuracy) as Away_accuracy
-FROM home_vs_away
-WHERE Winner = 'Away' AND away_team_runs > 10
+
+SELECT AVG(accuracy) as avg_away_accuracy, AVG(incorrect_calls) as avg_away_incorrect, AVG(correct_calls) as avg_away_correct,
+MAX(accuracy) as max_away_accuracy, MAX(incorrect_calls) as max_away_incorrect, MAX(correct_calls) as max_away_correct,
+MIN(accuracy) as min_away_accuracy, MIN(incorrect_calls) as min_away_incorrect, MIN(correct_calls) as min_away_correct
+FROM home_vs_away_games
+WHERE Winner = 'Away' 
+and (away_team_runs - home_team_runs) = 1
+
+
+-- Using 10 runs as "High" Scoring Game
+SELECT AVG(accuracy) as avg_home_accuracy, AVG(incorrect_calls) as avg_home_incorrect, AVG(correct_calls) as avg_home_correct,
+MAX(accuracy) as max_home_accuracy, MAX(incorrect_calls) as max_home_incorrect, MAX(correct_calls) as max_home_correct,
+MIN(accuracy) as min_home_accuracy, MIN(incorrect_calls) as min_home_incorrect, MIN(correct_calls) as min_home_correct
+FROM home_vs_away_games
+WHERE Winner = 'Home' and home_team_runs > 10 AND away_team_runs > 10
+
+SELECT AVG(accuracy) as avg_away_accuracy, AVG(incorrect_calls) as avg_away_incorrect, AVG(correct_calls) as avg_away_correct,
+MAX(accuracy) as max_away_accuracy, MAX(incorrect_calls) as max_away_incorrect, MAX(correct_calls) as max_away_correct,
+MIN(accuracy) as min_away_accuracy, MIN(incorrect_calls) as min_away_incorrect, MIN(correct_calls) as min_away_correct
+FROM home_vs_away_games
+WHERE Winner = 'Away' and home_team_runs > 10 AND away_team_runs > 10
