@@ -10,11 +10,11 @@ As an avid baseball fan, Go Dodgers!, I wanted to expolore some statistical data
 ## Interesting Findings
 ### High and Low Accuracy Games
 - 1 Perfect game with a 100% accuracy
-- 32 Total games that were above or equal to 99% accuracy.
-- 183 Total games below or equal to 85% accuracy. 
+- 32 Total games that were above or equal to 99% accuracy. (19 in 2022 and 14 for all years before)
+- 183 Total games below or equal to 85% accuracy. (Large Majority are before 2020)
 
 ### Yearly Metrics
-- Starting in 2020 we start to see an increase in overall accuracy and a drop in incorrect calls. 
+- Starting in 2019 we start to see an increase in overall accuracy and a drop in incorrect calls. 
 - 2022 Playoff Statics were the best for the data points captured
 - 2017 Season had a sudden increase in accuracy and drop in incorrect calls when compared to 2 year before and after. 
 
