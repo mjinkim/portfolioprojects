@@ -201,3 +201,31 @@ WHERE date LIKE '%2021%'
 SELECT AVG(accuracy) as '2022_Accuracy', AVG(incorrect_calls) as Incorrect_Calls, AVG(total_run_impact) as Total_Runs_Impacted
 FROM baseball..mlb_umpire_scorecard
 WHERE (lower(date) LIKE '%2022%');
+
+----------------------------------------------------------------------------------------------------------------------------------
+--Testing Theory: Does a Home Field advantage impact overall umpire performance 
+SELECT umpire, home, home_team_runs, away, away_team_runs, incorrect_calls, correct_calls, accuracy, favor_home
+FROM baseball..mlb_umpire_scorecard
+
+-- Created view to test theory 
+CREATE VIEW home_vs_away AS(
+SELECT umpire, home, home_team_runs, away, away_team_runs, incorrect_calls, correct_calls, accuracy,
+CASE
+	WHEN home_team_runs > away_team_runs THEN 'Home'
+	WHEN away_team_runs > home_team_runs THEN 'Away'
+	END as Winner
+FROM baseball..mlb_umpire_scorecard
+)
+
+SELECT *
+FROM home_vs_away
+WHERE home_team_runs > 10 AND away_team_runs > 10
+ORDER by Winner DESC
+
+SELECT AVG(accuracy) as Home_accuracy
+FROM home_vs_away
+WHERE Winner = 'Home' AND home_team_runs > 10
+
+SELECT AVG(accuracy) as Away_accuracy
+FROM home_vs_away
+WHERE Winner = 'Away' AND away_team_runs > 10
