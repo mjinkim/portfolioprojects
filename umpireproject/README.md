@@ -19,6 +19,12 @@ As an avid baseball fan, Go Dodgers!, I wanted to expolore some statistical data
 - 2017 Season had a sudden increase in accuracy and drop in incorrect calls when compared to 2 year before and after. 
 
 ### Does Home Field also Impact Umpires (Theory) 
+- For the total data we see 9753 wins for Home Teams and 8459 Away Teams
+- We see generally the away team on average has a higher number of incorrect calls and correct calls. Accuracy remains the same. 
+- Games with a 1 score difference we see the away team reciving on average 12.00 incorrect calls to 11.59 for the home team and 146.16 correct calls to 141.65 for the home team.
+- Games with both teams scoring more than 10 runs saw the same story. With the away team reciving on average 14.27 incorrect calls to 13.56 and 193.07 to 180.00. 
+
+## Conclusions
 
 
 
