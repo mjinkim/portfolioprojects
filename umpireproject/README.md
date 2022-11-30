@@ -2,7 +2,7 @@
 <img src="https://media.giphy.com/media/3otOKsqHz8cLLzD7JC/giphy.gif" width="400" height="250">
 </p>
 
-<h1 align="center"> Umpire Accuracy Exploratory Project (In Progress) </h1>
+<h1 align="center"> Umpire Accuracy Exploratory Project</h1>
 
 ## Purpose
 As an avid baseball fan, Go Dodgers!, I wanted to expolore some statistical data for umpires behind the plate. I used data on Kaggle from the [UmpScoreCard](https://umpscorecards.com/) and explored into the data to see if any recent MLB rule changes have impacted the overall performance of umpire calls. A great way to improve my querying skills, at the same time review some baseball data. 
@@ -24,8 +24,13 @@ As an avid baseball fan, Go Dodgers!, I wanted to expolore some statistical data
 - Games with a 1 score difference we see the away team reciving on average 12.00 incorrect calls to 11.59 for the home team and 146.16 correct calls to 141.65 for the home team.
 - Games with both teams scoring more than 10 runs saw the same story. With the away team reciving on average 14.27 incorrect calls to 13.56 and 193.07 to 180.00. 
 
-## Conclusions
+### Rule Changes
+- MLB altered baseballs in use for 2021 season. The league required all baseballs to have a coefficient of restituion (bounce of the ball) to be in a new range. To increase drag on baseball. In attempt to reduce home run rate. 
+- MLB enforced rule on illegal use of foreign substance on the baseball. Pitchers will have more mandatory checks per game. 
 
+## Conclusions
+- With the more recent crack down on illegal substance that pitches are using in game also caused their overall [spin rate to drop](https://www.nytimes.com/interactive/2021/07/19/upshot/major-league-baseball-spin-rate-shift.html). Most major league pitches utilize a variation of fastballs, breaking balls, and changeups that all visually appear differently to batters. The overall rotation of the baseball seems to also impact how umpires are able to track the baseball into the strike zone. 
+- 
 
 
 ## Materials Used
@@ -35,6 +40,8 @@ As an avid baseball fan, Go Dodgers!, I wanted to expolore some statistical data
 
 [MLB Article - Rule Enforcement](https://www.mlb.com/news/faq-sticky-stuff-and-new-rule-enforcement)
 
-[MLB to alter baseballs for '21 season](www.mlb.com/news/mlb-to-alter-baseballs-for-2021)
+[MLB to alter baseballs for '21 season](https://www.mlb.com/news/mlb-to-alter-baseballs-for-2021)
+
+[Spin Rate Drop - NY Times](https://www.nytimes.com/interactive/2021/07/19/upshot/major-league-baseball-spin-rate-shift.html)
 
 [AI TakeOver](https://theanalyst.com/na/2022/08/will-some-catchers-be-pushed-out-of-baseball-when-the-robot-umpires-arrive/)
