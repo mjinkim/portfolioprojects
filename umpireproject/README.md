@@ -21,8 +21,10 @@ As an avid baseball fan, Go Dodgers!, I wanted to expolore some statistical data
 ### Does Home Field also Impact Umpires (Theory) 
 - For the total data we see 9753 wins for Home Teams and 8459 Away Teams
 - We see generally the away team on average has a higher number of incorrect calls and correct calls. Accuracy remains the same. 
-- Games with a 1 score difference we see the away team reciving on average 12.00 incorrect calls to 11.59 for the home team and 146.16 correct calls to 141.65 for the home team.
-- Games with both teams scoring more than 10 runs saw the same story. With the away team reciving on average 14.27 incorrect calls to 13.56 and 193.07 to 180.00. 
+- Games with a 1 score difference we see the away team reciving on average 12 incorrect calls to 11 for the home team. With the average incorrect calls in mind, we saw in 2022 the away team winning 71 games and the home team winning 95.
+- Games with a 1 score difference we saw the away team reciving 146.16 correct calls to 141.65 for the home team. With the average correct calls in mind, we saw in 2022 the away team winning 137 games and the home team winning 190
+- Games with both teams scoring more than 10 runs saw the same story. With the away team reciving on average 14.27 incorrect calls to 13.56 
+- and 193.07 to 180.00. There was not difference with high scoring games using the average incorrect calls in 2022. We did see the home team winning 4 games to 0 games when using the correct average. 
 
 ### Rule Changes
 - MLB altered baseballs in use for 2021 season. The league required all baseballs to have a coefficient of restituion (bounce of the ball) to be in a new range. To increase drag on baseball. In attempt to reduce home run rate. 
@@ -31,7 +33,7 @@ As an avid baseball fan, Go Dodgers!, I wanted to expolore some statistical data
 ## Conclusions
 - With the more recent crack down on illegal substance that pitches are using in game also caused their overall [spin rate to drop](https://www.nytimes.com/interactive/2021/07/19/upshot/major-league-baseball-spin-rate-shift.html). Most major league pitches utilize a variation of fastballs, breaking balls, and changeups that all visually appear differently to batters. The overall rotation of the baseball seems to also impact how umpires are able to track the baseball into the strike zone. 
 - As the MLB is looking to incoporate AI systems to improve the overall correct balls and strikes in a game. We could also see the catcher position alter as well. Catchers also have an important role in ["framing runs"](https://theanalyst.com/na/2022/08/will-some-catchers-be-pushed-out-of-baseball-when-the-robot-umpires-arrive)  in which they are awarded a pitch outside of the strike zone with their glove placement during the catch of a pitch. Having a system that will automatically call the ball might also alter catchers into a more traditional on base position.
-
+- It is hard to say if the average of incorrect calls and correct calls has a correlation towards teams winning as most team expereice an advantage at their home stadium. We do see a slight difference with umpires calling incorrect and correct balls during a game. Incorrect and correct calls do impact how teams utilize thier bullpin, most teams have a set limit to how many pitches their starting pitcher throws and how many pitches each bull pin player throws. The sligh difference could provid an advantage to teams to pull their starter in order to prevent injuries. Teams can then take advantage of the new pitcher coming in to save runs or get crucial outs.
 
 ## Materials Used
 [MLB Baseball Umpire Scorecards 2015 - 2022](https://www.kaggle.com/datasets/mattop/mlb-baseball-umpire-scorecards-2015-2022)
