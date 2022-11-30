@@ -24,7 +24,7 @@ As an avid baseball fan, Go Dodgers!, I wanted to expolore some statistical data
 - Games with a 1 score difference we see the away team reciving on average 12 incorrect calls to 11 for the home team. With the average incorrect calls in mind, we saw in 2022 the away team winning 71 games and the home team winning 95.
 - Games with a 1 score difference we saw the away team reciving 146.16 correct calls to 141.65 for the home team. With the average correct calls in mind, we saw in 2022 the away team winning 137 games and the home team winning 190
 - Games with both teams scoring more than 10 runs saw the same story. With the away team reciving on average 14.27 incorrect calls to 13.56 
-- and 193.07 to 180.00. There was not difference with high scoring games using the average incorrect calls in 2022. We did see the home team winning 4 games to 0 games when using the correct average. 
+- There was not difference with high scoring games using the average incorrect calls in 2022. We did see the home team winning 4 games to 0 games when using the correct average. 
 
 ### Rule Changes
 - MLB altered baseballs in use for 2021 season. The league required all baseballs to have a coefficient of restituion (bounce of the ball) to be in a new range. To increase drag on baseball. In attempt to reduce home run rate. 
