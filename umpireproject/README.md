@@ -30,7 +30,7 @@ As an avid baseball fan, Go Dodgers!, I wanted to expolore some statistical data
 
 ## Conclusions
 - With the more recent crack down on illegal substance that pitches are using in game also caused their overall [spin rate to drop](https://www.nytimes.com/interactive/2021/07/19/upshot/major-league-baseball-spin-rate-shift.html). Most major league pitches utilize a variation of fastballs, breaking balls, and changeups that all visually appear differently to batters. The overall rotation of the baseball seems to also impact how umpires are able to track the baseball into the strike zone. 
-- 
+- As the MLB is looking to incoporate AI systems to improve the overall correct balls and strikes in a game. We could also see the catcher position alter as well. Catchers also have an important role in ["framing runs"](https://theanalyst.com/na/2022/08/will-some-catchers-be-pushed-out-of-baseball-when-the-robot-umpires-arrive)  in which they are awarded a pitch outside of the strike zone with their glove placement during the catch of a pitch. Having a system that will automatically call the ball might also alter catchers into a more traditional on base position.
 
 
 ## Materials Used
