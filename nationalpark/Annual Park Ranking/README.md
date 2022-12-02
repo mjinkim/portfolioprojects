@@ -19,4 +19,9 @@ The following were not included in the 2021 park sheet and are aviable in the in
 - John F. Kennedy NHS
 - Clara Barton NHS
 
+## Material Used
 ### [National Park Service Stats](https://irma.nps.gov/STATS/Reports/National)
+
+[Visitation By State and by Park for Calendar Year](https://irma.nps.gov/STATS/SSRSReports/National%20Reports/Visitation%20By%20State%20and%20By%20Park%20(2017%20-%20Last%20Calendar%20Year))
+
+[Current Year Monthly and Annual Summary Report](https://irma.nps.gov/STATS/SSRSReports/National%20Reports/Current%20Year%20Monthly%20and%20Annual%20Summary%20Report%20(1979%20-%20Present))
