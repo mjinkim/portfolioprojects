@@ -2,8 +2,8 @@
 
 ## History
 The Race to the Clouds, is an annual automobile hillclim to the summit of Pikes Peak in Colorado, US. The track measures 12.42 miles and has over 156 turns, 
-climbing 4,720 ft from the start at Mile 7 on Pikes Peak Highway, to the finish at 14,115 ft on grades averaging 7.2%. The race was started in 1916 and currently contains 
-6 different divisions. The next race will take place on June 25, 2023.
+climbing 4,720 ft from the start at Mile 7 on Pikes Peak Highway, to the finish at 14,115 ft on grades averaging 7.2%. The race was started in 1916 and currently contains. The race only stoped during 1917-1919 and 1942-1945 during both World Wars.<br>
+<br> 6 different divisions, The next race will take place on June 25, 2023.
 
 ## [Divisons](https://ppihc.org/divisions/)
 - <strong>Unlimited:</strong> Most exotic vehicles, many purpose-built for PPIHC. This division holds the best chance of seeting a new overall record.
