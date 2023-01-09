@@ -22,3 +22,7 @@ climbing 4,720 ft from the start at Mile 7 on Pikes Peak Highway, to the finish 
 |2016 E-Motion Porsche GT3R TT|Pikes Peak Open|10:52.664|Rhys Millen|
 |2020 Porsche GT4 Clubsport |Porsche Pikes Peak Trophy By Yokohama|11:22.691|Cam Ingram|
 
+## Prototype Dashboard
+![Prototype Dashboard](https://raw.githubusercontent.com/mjinkim/portfolioprojects/main/pikes_peak/proto_dash.png)
+The attempt here is to present all data from the 2022 pdf document in a more interactive expereince. Being able to see that incredible times and also the skilled drives
+behind the wheel. 
